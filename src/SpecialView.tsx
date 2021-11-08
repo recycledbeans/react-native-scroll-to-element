@@ -25,8 +25,8 @@ const SpecialView: React.FC = ({ id, focused, children, ...props }, self) => {
   );
 
   const focus = React.useCallback(({ animated = true } = {}) => {
-    getRelativeLayout(({ y }) => {
-      context.get().ref.scrollTo({ y, animated });
+    getRelativeLayout(({ x }) => {
+      context.get().ref.scrollTo({ x, animated });
     });
   }, []);
 
